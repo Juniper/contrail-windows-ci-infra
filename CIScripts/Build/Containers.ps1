@@ -22,7 +22,7 @@ function Invoke-ContainerBuild {
 
     switch -regex ((Get-CimInstance Win32_OperatingSystem).Caption) {
         'Windows Server 2016' {
-            $BaseImage = 'microsoft/nanoserver'
+            $BaseImage = 'microsoft/windowsservercore:ltsc2016'
         }
         'Windows Server 2019' {
             $BaseImage = 'mcr.microsoft.com/windows/nanoserver:1809'
